@@ -1,0 +1,38 @@
+[
+	{
+		"nombre": "Jose Carlos",
+		"apellido": "Gallegos",
+		"puesto": "Desarrollador",
+		"sueldo":	12000
+	},
+	{
+		"nombre": "Javier",
+		"apellido": "Martinez",
+		"puesto": "Desarrollador",
+		"sueldo":	10000
+	},
+	{
+		"nombre": "Ana",
+		"apellido": "Madrid",
+		"puesto": "Analista",
+		"sueldo":	11500
+	},
+	{
+		"nombre": "Jazmin",
+		"apellido": "Hernandez",
+		"puesto": "Lider de Proyecto",
+		"sueldo":	130000
+	},
+	{
+		"nombre": "Ponchito",
+		"apellido": "Herrera",
+		"puesto": "Analista",
+		"sueldo":	150000
+	},
+	{
+		"nombre": "Chico",
+		"apellido": "Rocket",
+		"puesto": "Desarrollador",
+		"sueldo":	120000
+	}
+]
