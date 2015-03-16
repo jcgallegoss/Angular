@@ -7,8 +7,36 @@
 	<script src="controlador.js"></script>
 </head>
 <body ng-controller="Empleados">
-<input type="text" ng-model="nombre">
-{{nombre}}
+<input type="text" ng-model="geek" placeholder="Buscar">
 
+<table>
+	<tbody>
+		<thead>
+				<th><a href="" ng-click="ordenarColumna = 'nombre'; reversa = !reversa ">Nombre</a></th>
+				<th><a href="" ng-click="ordenarColumna = 'apellido'; reversa = !reversa ">Apellido</a></th>
+				<th><a href="" ng-click="ordenarColumna = 'puesto'; reversa = !reversa ">Puesto</a></th>
+				<th><a href="" ng-click="ordenarColumna = 'sueldo'; reversa = !reversa ">Sueldo</a></th>
+		</thead>
+		<tr ng-repeat="i in empleados | filter:geek | orderBy:ordenarColumna:reversa">
+			<td>{{i.nombre}}</td>
+			<td>{{i.apellido}}</td>
+			<td>{{i.puesto}}</td>
+			<td>{{i.sueldo | currency}}</td>
+			<td><a href="" ng-click="EliminarEmpleado(i)">Eliminar</a></td>
+			<td><a href="" ng-click="PreEditarEmpleado(i)">Editar</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<form ng-submit="NuevoEmpleado();">
+	<input type="text" placeholder="Nombre" ng-model="empleado.nombre"> <br>
+	<input type="text" placeholder="Apellido" ng-model="empleado.apellido"><br>
+	<input type="text" placeholder="Puesto" ng-model="empleado.puesto"><br>
+	<input type="text" placeholder="Sueldo" ng-model="empleado.sueldo"><br>
+	
+	<input type="submit" value="Agregar" ng-hide="!banderaEditar">	
+	<input type="button" value="Editar" ng-hide="banderaEditar" ng-click="EditarEmpleado()">	
+	
+</form>
 </body>
 </html>
